@@ -1,5 +1,8 @@
+
+
+
 /// cálculo TENSION 
-const tencion= () => {                                             
+const tencion = () => {                                             
 
      const d1 = document.querySelector("#inp-t").value;                     
      const d2= document.querySelector("#inp-r").value;
@@ -16,8 +19,8 @@ const tencion= () => {
  
  const intencidad = () => {
  
-     const d3= document.querySelector("#inp-t").value;
-     const d4= document.querySelector("#inp-r").value;
+     const d3 = document.querySelector("#inp-t").value;
+     const d4 = document.querySelector("#inp-r").value;
      const inten= d3 / d4;
      document.querySelector("#intensidad").value = intensity;
  
