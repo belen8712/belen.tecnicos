@@ -8,8 +8,8 @@
         let costo = `
                <tr>
                        <td>${element.casa.nombre}</td>
-                       <td class="btn btn-warning">${element.casa.compra}</td>
-                       <td>${element.casa.venta}</td>
+                       <td><span class="budge bg-warning text-dark">${element.casa.compra}</span></td>
+                       <td><span class="budge bg-info text-dark">${element.casa.venta}</span</td>
               </tr>
                   
           `;   
