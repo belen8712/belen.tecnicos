@@ -6,7 +6,7 @@ const enrutador = express.Router();
 const db = require('../database')
 
 
-    enrutador.get('/producto/:codigo', (req,res) => {
+    enrutador.get('/producto', (req,res) => {
     //vamos a realisar una consulta a la base, una query
       db.query('select * from producto', (err,rows) => {
         if(err){
