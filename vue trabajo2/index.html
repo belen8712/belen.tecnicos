@@ -9,56 +9,65 @@
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-     <div id="aap" class="container mt-3">
+    <nav class="navbar navbar-light bg-info">
+      <div class="container-fluid">
+        <a class="navbar-breand" href="a">Navbar</a>
+      </div>
+    </nav>
+    
+    
+    <div id="app" class="container mt-3">
       
          <div class="row">
-
-            <div class="mb-3">
-                <input class="form-control" type="texte" placeholder="ingrece nombre">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <input v-model="nombre" class="form-control" type="texte" placeholder="ingrece nombre">
+                </div>
+                
+                <div class="mb-3">
+                    <input  v-model="apellido" class="form-control" type="text" placeholder="ingrese apellido">
+                </div>
+        
+                <div class="mb-3">
+                    <input v-model="dni" class="form-control" type="number" placeholder="ingrese DNI">
+                </div>
+                <BUtton v-on:click="guardarEmpleado"class="btn btn-primary">guardar empleado</BUtton>
             </div>
-            
-            <div class="mb-3">
-                <input class="form-control" type="text" placeholder="ingrese apellido">
+           
+
+           <div class="col-lg-8">
+                <table class="table">
+                        <thead>
+                          <tr>
+                                <th>nombre</th>
+                                <th>apellido</th>
+                                <th>DNI</th>
+                                <th>accion</th>
+                          </tr>
+
+                        </thead>
+                        <tbody>
+                          <tr v-for="(element,index) of lista_Empleados">
+                             <td>{{element.nombre}}</td>
+                             <td>{{element.apellido}}</td>
+                             <td>{{element.dni}}</td>
+                             <td><button v-on:click="eliminarEmpleado(index)" class="btn btn-dager btn-sm">x</button></td>
+                          </tr>
+                        </tbody>
+                     </table>
+               </div>   
             </div>
-     
-            <div class="mb-3">
-                <input class="form-control" type="number" placeholder="ingrese DNI">
-            </div>
-            <BUtton class="btn btn-primary">guardar empleado</BUtton>
-         </div>
-         <div class="col-lg-8">
-           <table class="table">
-             <thead>
-               <tr>
-                    <th>Nombre</th>
-                    <th>apellido</th>
-                    <th>DNI</th>
-               </tr>
-
-             </thead>
 
 
 
-           </table>
-
-
-
-         </div>   
+                </div>
 
 
 
 
-         </div>
+            <script src="index.js"></script>
 
 
 
-
-     </div>
-
-
-    <script>index.js</script>
-
-
-
-</body>
+        </body>
 </html>
